@@ -43,7 +43,7 @@ def insertion_hundred(hundred):
             hundred[poshundred] = hundred[poshundred-1]
             poshundred = poshundred-1
         hundred[poshundred] = current_element
-#print(hundredlist)
+
 insertion_hundred(hundredlist)
 endhundred = time.time()
 executionhundred = endhundred - starthundred
@@ -107,7 +107,6 @@ for i in range(0,10):
     tm = random.randint(0,10)
     tmlist.append(tm)
 def mergeSort(tmlist):
-    #print("Splitting ",alist)
     if len(tmlist)>1:
         mid = len(tmlist)//2
         lefthalf = tmlist[:mid]
@@ -133,7 +132,6 @@ def mergeSort(tmlist):
             tmlist[k]=righthalf[j]
             j=j+1
             k=k+1
-    #print("Merging ",alist)
 mergeSort(tmlist)
 endtimetm=time.time()
 executionmergetm = endtimetm - starttimetm
@@ -176,7 +174,6 @@ def mergeSorthundred(hundredmlist):
             hundredmlist[k]=righthalf[j]
             j=j+1
             k=k+1
-    #print("Merging ",alist)
 mergeSorthundred(hundredmlist)
 endtimehundredm=time.time()
 executionmergehundred = endtimehundredm - starttimehundredm
@@ -185,7 +182,6 @@ print(hundredmlist)
 print('Execution Time: ', endtimehundredm - starttimehundredm)
 print("")
 
-
 print("Merge Sort")
 starttimethousandm=time.time()
 thousandmlist = []
@@ -193,7 +189,6 @@ for i in range(0,1000):
     thousandm = random.randint(0,1000)
     thousandmlist.append(thousandm)
 def mergeSortthousand(thousandmlist):
-    #print("Splitting ",alist)
     if len(thousandmlist)>1:
         mid = len(thousandmlist)//2
         lefthalf = thousandmlist[:mid]
@@ -219,7 +214,6 @@ def mergeSortthousand(thousandmlist):
             thousandmlist[k]=righthalf[j]
             j=j+1
             k=k+1
-    #print("Merging ",alist)
 mergeSortthousand(thousandmlist)
 endtimethousandm=time.time()
 executionmergethousand = endtimethousandm - starttimethousandm
@@ -235,7 +229,6 @@ for i in range(0,10000):
     tenthousandm = random.randint(0,10000)
     tenthousandmlist.append(tenthousandm)
 def mergeSorttenthousand(tenthousandmlist):
-    #print("Splitting ",alist)
     if len(tenthousandmlist)>1:
         mid = len(tenthousandmlist)//2
         lefthalf = tenthousandmlist[:mid]
@@ -261,7 +254,6 @@ def mergeSorttenthousand(tenthousandmlist):
             tenthousandmlist[k]=righthalf[j]
             j=j+1
             k=k+1
-    #print("Merging ",alist)
 mergeSorttenthousand(tenthousandmlist)
 endtimetenthousandm=time.time()
 executionmergetenthousand = endtimetenthousandm - starttimetenthousandm
@@ -270,11 +262,9 @@ print(tenthousandmlist)
 print('Execution Time: ', executionmergetenthousand)
 print("")
 
-
 x1 = [1,2,3,4]
 y1 = [executionten, executionhundred, executionthousand, executiontenk]
 plt.plot(x1, y1, label="Insertion Sort")
-
 
 x2 = [1,2,3,4]
 y2 = [executionmergetm, executionmergehundred, executionmergethousand, executionmergetenthousand]
@@ -282,10 +272,6 @@ plt.plot(x2, y2, label="Merge Sort")
 
 plt.xlabel('x - axis / Integers')
 plt.ylabel('y - axis / Time in seconds')
-
 plt.title('lines in the graph')
-
 plt.legend()
-
 plt.show()
-
